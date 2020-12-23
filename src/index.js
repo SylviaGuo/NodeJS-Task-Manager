@@ -26,4 +26,3 @@ const myFunction = () => {
     const data = jwt.verify(token, 'syvliawebsite')
     console.log(data)
 }
-myFunction()
