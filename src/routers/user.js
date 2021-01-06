@@ -6,6 +6,10 @@ const auth = require('../middleware/auth')
 const { sendWelcomeEmail, sendGoodbyeEmail } = require('../email/account')
 const router = new express.Router()
 
+router.get('', (req, res) => {
+    res.render('index')
+})
+
 router.post('/users', async (req, res)=>{
     const user = new User(req.body)
     try {

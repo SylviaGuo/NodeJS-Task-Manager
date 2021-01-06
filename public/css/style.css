@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+}
+#title {
+    text-align:center;
+    margin: 30px 0px;
+    color: darkcyan;
+}
+#main {
+    display: flex;
+    margin: 0px 5%;
+    text-align: left;
+    height: 100vh;  
+}
+#main h1 {
+    font-size: 24px;
+}
+#main h2{
+    font-size: 18px;
+}
+#sideBar {
+    width:200px;
+    display: flex;
+    float: left;
+    background-color: darkcyan;
+    color: white;
+}
+ul li {
+    text-decoration: none;
+    margin-bottom:10px;
+}
+.pointer {
+    cursor: pointer;
+}
+#content {
+    min-width: 600px;
+    float: right;
+    background-color: white;
+    padding: 30px 50px;
+    margin:0px;
+}
+#content li {
+    list-style: none;
+}
+.secondMenu li{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}

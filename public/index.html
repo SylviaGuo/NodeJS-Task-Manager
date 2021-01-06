@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <script src='./js/main.js'></script>    
+    </head>
+    <body>
+    <div id='title'><h2>Task manager API documentation</h2></div>
+    <div id='main'>
+        <div id='sideBar'>
+            <ul>
+                <li>
+                    <span class='menu'>User</span>
+                    <ul id='secondMenuUser' class='secondMenu'>
+                        <li id='user-create' class='secondLi pointer'>Create</li>
+                        <li id='user-login' class='secondLi pointer'>Login</li>
+                        <li id='user-logout' class='secondLi pointer'>Logout</li>
+                        <li id='user-logoutall' class='secondLi pointer'>Logout All</li>
+                        <li id='user-get-profile' class='secondLi pointer'>Get Profile</li>
+                        <li id='user-update-profile' class='secondLi pointer'>Update Profile</li>
+                        <li id='user-delete-profile' class='secondLi pointer'>Delete Profile</li>
+                        <li id='user-upload-avatar' class='secondLi pointer'>Upload avatar</li>
+                        <li id='user-get-avatar' class='secondLi pointer'>Get avatar</li>
+                        <li id='user-delete-avatar' class='secondLi pointer'>Delete avatar</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class='menu'>Task</span>
+                    <ul class='secondMenu'>
+                        <li id='task-create' class='secondLi pointer'>Create</li>
+                        <li id='task-get-tasks' class='secondLi pointer'>Get tasks</li>
+                        <li id='task-get-task' class='secondLi pointer'>Get a task</li>
+                        <li id='task-update-task' class='secondLi pointer'>Update task</li>
+                        <li id='task-delete-task' class='secondLi pointer'>Delete task</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul id='content'>
+            <li id='user-create-content'>
+                <p>All Fields: ['name', 'email', 'age', 'password', 'tokens', 'avatar', 'createAt', 'updatedAt', '__v']</p>
+                <h2>Create user</h2> 
+                <p>post <i>/users</i></p>
+                <p>user:{
+                    "name":"Mike",[required]
+                    "email":"mike@gmail.com",[required]
+                    "password":"mike123",[required]
+                    "age":"20"
+                }</p>
+            </li>
+            <li id='user-login-content' class='hide'>
+                <h2>Login</h2>
+                <p>post <i>/users/login</i></p>
+                <p>Fields: ['email', 'password']</p>
+            </li>
+            <li id='user-logout-content' class='hide'>
+                <h2>Logout</h2>
+                <p>Delete current token of the user</p>
+                <p>post <i>/users/logout</i></p>
+            </li>
+            <li id='user-logoutall-content' class='hide'>
+                <h2>LogoutAll</h2>
+                <p>Delete all tokens of the user</p>
+                <p>post <i>/users/logoutAll</i></p>
+            </li>
+            <li id='user-get-profile-content' class='hide'>
+                <h2>Get Profile</h2>
+                <p>get <i>/users/me</i></p>
+                <p>Fields: ['name', 'email', 'age']</p>
+            </li>
+            <li id='user-update-profile-content' class='hide'>
+                <h2>Update Profile</h2>
+                <p>patch <i>/users/me</i></p>
+                <p>Fields: ['name', 'email', 'age', 'password']</p>
+            </li>
+            <li id='user-delete-profile-content' class='hide'>
+                <h2>Delete Profile</h2>
+                <p>delete <i>/users/me</i></p>
+                <p>PS: The users' tasks will be deleted as well</p>
+            </li>
+            <li id='user-upload-avatar-content' class='hide'>
+                <h2>Upload avatar</h2>
+                <p>post <i>/users/me/avatar</i></p>
+                <p>header avatar</p>
+            </li>
+            <li id='user-get-avatar-content' class='hide'>
+                <h2>Get avatar</h2>
+                <p>get <i>/users/:userId/avatar</i></p>
+            </li>
+            <li id='user-delete-avatar-content' class='hide'>
+                <h2>Delete avatar</h2>
+                <p>delete <i>/users/me/avatar</i></p>
+            </li>
+            <li id='task-create-content' class='hide'>
+                <p>All fields: ['description', 'completed', 'owner', 'createdAt', 'updatedAt', '__v']</p>
+                <h2>Create task</h2>
+                <p>post <i>/tasks</i></p>
+                <p>Fields: ['description(required)', 'completed(default: false)']</p>
+            </li>
+            <li id='task-get-tasks-content' class='hide'>
+                <h2>Get tasks</h2>
+                <p>get <i>/tasks</i></p>
+                <p>/tasks?completed=true
+                /tasks?limit=10&skip=10
+                /tasks?sortBy=createdAt:desc</p>
+            </li>
+            <li id='task-get-task-content' class='hide'>
+                <h2>Get a task</h2>
+                <p>get <i>/tasks/:id</i></p>
+            </li>
+            <li id='task-update-task-content' class='hide'>
+                <h2>Update a task</h2>
+                <p>patch <i>/tasks/:id</i></p>
+            </li>
+            <li id='task-delete-task-content' class='hide'>
+                <h2>Delete a task</h2>
+                <p>delete <i>/tasks/:id</i></p>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>
